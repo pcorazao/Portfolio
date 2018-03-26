@@ -2,7 +2,17 @@
 var gulp = require('gulp');
 var server = require('gulp-express');
 const eslint = require('gulp-eslint');
- 
+
+gulp.task('dev', function() {
+    process.env.NODE_ENV = 'development';
+    gulp.start('server');
+});
+
+gulp.task('prod', function() {
+    process.env.NODE_ENV = 'production';
+    gulp.start('server');
+});
+
 gulp.task('server', ['lint'], function () {
     // Start the server at the beginning of the task 
     server.run(['app.js']);

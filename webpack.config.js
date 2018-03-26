@@ -2,6 +2,7 @@
     ./webpack.config.js
 */
 const path = require('path');
+const env = process.env.NODE_ENV;
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -35,5 +36,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
+  mode: env || 'production'
 }
