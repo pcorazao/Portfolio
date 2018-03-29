@@ -2,12 +2,14 @@
     ./app/components/App.jsx
 */
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import {SiteNavigation} from './SiteNavigation.jsx';
 
 export default class App extends React.Component {
   render() {
     return (
-     <div style={{textAlign: 'center'}}>
-        <h1>Hello World!</h1>
+     <div>
+        <SiteNavigation/>         
       </div>);
   }
 }
