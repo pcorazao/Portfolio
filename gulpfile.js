@@ -2,6 +2,8 @@
 var gulp = require('gulp');
 var server = require('gulp-express');
 const eslint = require('gulp-eslint');
+const webpack = require('webpack');
+const gulpWebpack = require('webpack-stream');
 
 gulp.task('dev', function() {
     process.env.NODE_ENV = 'development';
@@ -10,8 +12,15 @@ gulp.task('dev', function() {
 
 gulp.task('prod', function() {
     process.env.NODE_ENV = 'production';
+    //gulp.start('webpack');
     gulp.start('server');
 });
+
+gulp.task('webpack', function() {
+    return gulp.src('app/index.js')
+  .pipe(gulpWebpack( require('./webpack.config.js',webpack) ))
+  .pipe(gulp.dest('dist/'));
+  });
 
 gulp.task('server', ['lint'], function () {
     // Start the server at the beginning of the task 
@@ -40,7 +49,7 @@ gulp.task('lint', () => {
     // So, it's best to have gulp ignore the directory as well.
     // Also, Be sure to return the stream from the task;
     // Otherwise, the task may end before the stream has finished.
-    return gulp.src(['**/*.js','!node_modules/**','!dist/**'])
+    return gulp.src(['**/*.js','**/*.jsx','!node_modules/**','!dist/**'])
         // eslint() attaches the lint output to the "eslint" property
         // of the file object so it can be used by other modules.
         .pipe(eslint())

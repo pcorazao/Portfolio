@@ -3,18 +3,28 @@
 */
 const path = require('path');
 const env = process.env.NODE_ENV;
-
+const dist = path.resolve('dist');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './app/index.html',
   filename: 'index.html',
   inject: 'body'
 });
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPluginConfig = new CleanWebpackPlugin([dist]);
+const HotModuleReplacementPluginConfig = new webpack.HotModuleReplacementPlugin();
+const NoEmitOnErrorsPluginConfig = new webpack.NoEmitOnErrorsPlugin();
+const LiveReloadNotifyPlugin = require('live-reload-notify-webpack-plugin');
+const LiveReloadNotifyPluginConfig = new LiveReloadNotifyPlugin({
+  ignoreFirstRun: true,
+  logFn: console.log
+})
 
 module.exports = {
   entry: './app/index.js',
   output: {
-    path: path.resolve('dist'),
+    path: dist,
     filename: 'index_bundle.js'
   },
   module: {
@@ -34,9 +44,13 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader"
       },
-      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [CleanWebpackPluginConfig,HtmlWebpackPluginConfig,HotModuleReplacementPluginConfig,NoEmitOnErrorsPluginConfig,LiveReloadNotifyPluginConfig],
   mode: env || 'production'
-}
+};
