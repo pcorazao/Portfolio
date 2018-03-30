@@ -3,8 +3,6 @@ var app = module.exports.app = exports.app = express();
 const port = process.env.PORT || 5000;
 const env = process.env.NODE_ENV;
 
-
-
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express'});
 });
@@ -12,9 +10,9 @@ app.get('/api/hello', (req, res) => {
 //hosts static content form /app folder
 app.use(express.static('dist'));
 
-
-//if(env === 'development')
-//{
+// hot middle webpack setup
+if(env === 'development')
+{
   //webpack and webpack config delaration
   const webpack = require('webpack');
   const config = require('./webpack.config.js');
@@ -33,6 +31,6 @@ app.use(express.static('dist'));
   app.use(wpmw);
   // webpack hot
   app.use(wphmw);
-//}
+}
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -13,13 +13,22 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CleanWebpackPluginConfig = new CleanWebpackPlugin([dist]);
-const HotModuleReplacementPluginConfig = new webpack.HotModuleReplacementPlugin();
-const NoEmitOnErrorsPluginConfig = new webpack.NoEmitOnErrorsPlugin();
-const LiveReloadNotifyPlugin = require('live-reload-notify-webpack-plugin');
-const LiveReloadNotifyPluginConfig = new LiveReloadNotifyPlugin({
-  ignoreFirstRun: true,
-  logFn: console.log
-})
+
+var webpackPlugins = [CleanWebpackPluginConfig,HtmlWebpackPluginConfig];
+if(env ==='development')
+{
+  const HotModuleReplacementPluginConfig = new webpack.HotModuleReplacementPlugin();
+  const NoEmitOnErrorsPluginConfig = new webpack.NoEmitOnErrorsPlugin();
+  const LiveReloadNotifyPlugin = require('live-reload-notify-webpack-plugin');
+  const LiveReloadNotifyPluginConfig = new LiveReloadNotifyPlugin({
+    ignoreFirstRun: true,
+    logFn: console.log
+  });
+
+  webpackPlugins.push(HotModuleReplacementPluginConfig);
+  webpackPlugins.push(NoEmitOnErrorsPluginConfig);
+  webpackPlugins.push(LiveReloadNotifyPluginConfig);
+}
 
 module.exports = {
   entry: './app/index.js',
@@ -51,6 +60,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [CleanWebpackPluginConfig,HtmlWebpackPluginConfig,HotModuleReplacementPluginConfig,NoEmitOnErrorsPluginConfig,LiveReloadNotifyPluginConfig],
+  plugins: webpackPlugins,
   mode: env || 'production'
 };
