@@ -13,6 +13,8 @@ app.use(express.static('dist'));
 // hot middle webpack setup
 if(env === 'development')
 {
+  console.log('Running in development mode');
+
   //webpack and webpack config delaration
   const webpack = require('webpack');
   const config = require('./webpack.config.js');

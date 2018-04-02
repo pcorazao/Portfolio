@@ -15,8 +15,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CleanWebpackPluginConfig = new CleanWebpackPlugin([dist]);
 
 var webpackPlugins = [CleanWebpackPluginConfig,HtmlWebpackPluginConfig];
-if(env ==='development')
+if(env === 'development')
 {
+
+  console.log('Running in development mode');
+
   const HotModuleReplacementPluginConfig = new webpack.HotModuleReplacementPlugin();
   const NoEmitOnErrorsPluginConfig = new webpack.NoEmitOnErrorsPlugin();
   const LiveReloadNotifyPlugin = require('live-reload-notify-webpack-plugin');

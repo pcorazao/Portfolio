@@ -10,15 +10,14 @@ gulp.task('dev', function() {
     gulp.start('server');
 });
 
-gulp.task('prod', function() {
+gulp.task('prod', ['webpack'], function() {
     process.env.NODE_ENV = 'production';
-    //gulp.start('webpack');
     gulp.start('server');
 });
 
 gulp.task('webpack', function() {
     return gulp.src('app/index.js')
-  .pipe(gulpWebpack( require('./webpack.config.js',webpack) ))
+  .pipe(gulpWebpack( require('./webpack.config.js'),webpack) )
   .pipe(gulp.dest('dist/'));
   });
 
