@@ -2,14 +2,22 @@
     ./app/components/App.jsx
 */
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {SiteNavigation} from './SiteNavigation.jsx';
+import {Main} from './Main.jsx';
+import {Footer} from './Footer.jsx';
 
 export default class App extends React.Component {
   render() {
     return (
      <div>
-        <SiteNavigation/>         
+       <Router>
+         <div>
+            <SiteNavigation/>
+            <Main/>
+            <Footer/>
+          </div>
+        </Router>         
       </div>);
   }
 }
