@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 var app = module.exports.app = exports.app = express();
 const port = process.env.PORT || 5000;
 const env = process.env.NODE_ENV;
@@ -6,9 +7,6 @@ const env = process.env.NODE_ENV;
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express'});
 });
-
-//hosts static content form /app folder
-app.use(express.static('dist'));
 
 // hot middle webpack setup
 if(env === 'development')
@@ -33,6 +31,21 @@ if(env === 'development')
   app.use(wpmw);
   // webpack hot
   app.use(wphmw);
+
+  //hosts static content form /app folder
+  app.use(express.static('dist'));
+}
+else
+{
+  // serve static assets normally
+  app.use(express.static(__dirname + '/dist'));
+
+  console.log('Path:' + path.resolve(__dirname, 'dist', 'index.html'));
+
+  // needed for react-router
+  app.get('*', (req, res, next) =>{
+    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  });
 }
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
