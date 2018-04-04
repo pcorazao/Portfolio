@@ -21,9 +21,9 @@ if(env === 'development')
   const webpackCompiler = webpack(config);
   const wpmw = webpackMiddleware(webpackCompiler,{
     noInfo: true,
-    mode: 'production',
-    writeToDisk: true
-    //publicPath: config.output.publicPath
+    mode: env,
+    writeToDisk: true,
+    publicPath: config.output.publicPath
   });
   const wphmw = webpackHotMiddleware(webpackCompiler);
 
@@ -32,15 +32,26 @@ if(env === 'development')
   // webpack hot
   app.use(wphmw);
 
-  //hosts static content form /app folder
+  // serve static assets normally
   app.use(express.static('dist'));
+
+  // needed for react-router
+  app.get('*', (req, res, next) => {
+    var filename = path.join(webpackCompiler.outputPath,'index.html');
+    webpackCompiler.outputFileSystem.readFile(filename, (err, result) =>{
+      if (err) {
+        return next(err);
+      }
+      res.set('content-type','text/html');
+      res.send(result);
+      res.end();
+    });
+  });
 }
 else
 {
   // serve static assets normally
   app.use(express.static(__dirname + '/dist'));
-
-  console.log('Path:' + path.resolve(__dirname, 'dist', 'index.html'));
 
   // needed for react-router
   app.get('*', (req, res, next) =>{
