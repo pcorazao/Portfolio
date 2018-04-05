@@ -13,14 +13,15 @@ import {CommerceHub} from './jobs/CommerceHub.jsx';
 export class Main extends React.Component {
             render()
             {        
-                return (<div>
-                    <Route exact={true} path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/hca" component={HCA} />
-                    <Route path="/asurion" component={Asurion} />
-                    <Route path="/nc2media" component={NC2Media} />
-                    <Route path="/commercehub" component={CommerceHub} />
-                    </div>                    
-                );  
+                return (
+                        <div style={{marginBottom: '180px', marginTop: '50px'}}>
+                            <Route exact={true} path="/" component={Home} />
+                            <Route path="/about" component={About} />
+                            <Route path="/hca" component={HCA} />
+                            <Route path="/asurion" component={Asurion} />
+                            <Route path="/nc2media" component={NC2Media} />
+                            <Route path="/commercehub" component={CommerceHub} />
+                        </div>                    
+                        );  
             }  
 }
