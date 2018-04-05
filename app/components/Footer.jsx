@@ -1,26 +1,29 @@
 // Footer.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Navbar, Nav } from 'react-bootstrap';
 
 export class Footer extends React.Component {
             render()
             {        
                 return (
-                    
-                        <Navbar fixedBottom="true">
-                          <Nav pullRight>
-                                <Navbar.Text>
-                                    <Navbar.Link href="https://github.com/pcorazao/Portfolio"><i class="fa fa-github"></i>&nbsp;source</Navbar.Link>
-                                </Navbar.Text>
-                                <Navbar.Text>
-                                    <Navbar.Link href="mailto:pcorazao@gmail.com"><i class="fa fa-at"></i>&nbsp;email</Navbar.Link>
-                                </Navbar.Text>
-                                <Navbar.Text>
-                                    <Navbar.Link href="https://www.linkedin.com/in/petercorazao/"><i class="fa fa-linkedin"></i>&nbsp;social</Navbar.Link>
-                                </Navbar.Text>
-                            </Nav>                           
-                        </Navbar>      
-                );  
+                        <div>
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom justify-content-end navbar-expand-lg">
+                                <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="https://github.com/pcorazao/Portfolio"><i class="fa fa-github"></i>&nbsp;Source</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="mailto:pcorazao@gmail.com"><i class="fa fa-envelope"></i>&nbsp;Email</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="https://www.linkedin.com/in/petercorazao/"><i class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="https://twitter.com/pcorazao"><i class="fa fa-twitter"></i>&nbsp;LinkedIn</a>
+                                </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        );  
             }  
 }

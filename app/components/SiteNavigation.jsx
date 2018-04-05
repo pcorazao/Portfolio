@@ -1,30 +1,38 @@
 // SiteNavigation.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export class SiteNavigation extends React.Component {
             render()
             {        
-                return (                    
-                <Navbar>
-                <Navbar.Header>
-                  <Navbar.Brand>
-                    <Link to={'/'}>Peter Corazao</Link>
-                  </Navbar.Brand>
-                </Navbar.Header>
-                <Nav>
-                  <NavItem eventKey={1}>
-                    <Link to={'/about'}>About</Link>
-                  </NavItem>                  
-                  <NavDropdown eventKey={2} title="Jobs" id="basic-nav-dropdown">
-                    <MenuItem eventKey={2.1}><Link to={'/hca'}>HCA</Link></MenuItem>
-                    <MenuItem eventKey={2.2}><Link to={'/asurion'}>Asurion</Link></MenuItem>
-                    <MenuItem eventKey={2.3}><Link to={'/nc2media'}>NC2 Media</Link></MenuItem>
-                    <MenuItem eventKey={2.4}><Link to={'/commercehub'}>CommerceHub</Link></MenuItem>
-                  </NavDropdown>
-                </Nav>
-              </Navbar>);  
+                return (  
+                  <div>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                      <Link class="navbar-brand" to={'/'}>Peter Corazao</Link>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <li class="nav-item active">
+                            <Link class="nav-link" to={'/about'}>About</Link>
+                          </li>                    
+                          <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Jobs
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <Link class="dropdown-item" to={'/hca'}>HCA</Link>
+                              <Link class="dropdown-item" to={'/asurion'}>Asurion</Link>
+                              <Link class="dropdown-item" to={'/NC2Media'}>NC2 Media</Link>
+                              <Link class="dropdown-item" to={'/CommerceHub'}>CommerceHub</Link>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                   </div>
+              );  
             }  
 }
