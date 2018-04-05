@@ -60,6 +60,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader'
+      },
+      {
+        test: /\.jpe?g$|\.ico$|\.gif$|\.wav$|\.mp3$/,
+        loader: 'file-loader?name=[name].[ext]'
       }
     ]
   },
