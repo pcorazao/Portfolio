@@ -22,9 +22,11 @@ export class Home extends React.Component {
                                             <h1 class="display-4">Welcome</h1>
                                             <p class="lead">Thanks so much for dropping by!</p>
                                             <hr class="my-4" />
-                                            <p>This is a place where I can share my professional experiences and show off some of my technical talents.
+                                            <p><i>This is a place where I can share my professional experiences and show off some of my technical talents.
                                                 <br /><br />
-                                                Please feel free to look around and reach out to me if you are looking for a hard working full stack software engineer.</p>
+                                                Please feel free to look around and reach out to me if you are looking for a hard working full stack software engineer!
+                                                </i>
+                                            </p>
                                                 <br />
                                             <p class="lead">
                                                 <Link to={'/about'}>

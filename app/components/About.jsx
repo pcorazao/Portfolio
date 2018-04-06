@@ -59,7 +59,7 @@ export class About extends React.Component {
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-11">
+                                    <div class="col-lg-11 offset-lg-1">
                                         <span class="badge badge-pill badge-dark">C#</span>&nbsp;
                                         <span class="badge badge-pill badge-dark">SQL</span>&nbsp;
                                         <span class="badge badge-pill badge-dark">JavaScript</span>&nbsp;
@@ -80,6 +80,16 @@ export class About extends React.Component {
                                         <span class="badge badge-pill badge-dark">HTML</span>&nbsp;
                                         <span class="badge badge-pill badge-dark">BootStrap</span>&nbsp;
                                         <span class="badge badge-pill badge-dark">CSS</span>&nbsp;
+                                    </div>
+                                </div>
+                                <div class="row" style={{marginTop:'30px'}}>
+                                    <div class="col-lg-12">
+                                        <h2>Blog</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-11 offset-lg-1">
+                                        From time to time I contribute to <a href="https://pragmaticsoa.wordpress.com/">Pragmatic Architecture</a>
                                     </div>
                                 </div>
                             </div>
