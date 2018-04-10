@@ -19,9 +19,10 @@ export class SiteNavigation extends React.Component {
                             <Link class="nav-link" to={'/about'}>About</Link>
                           </li>                    
                           <li class="nav-item dropdown">
-                            <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {/* <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Jobs
-                            </div>
+                            </div> */}
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jobs <span class="caret"></span></a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                               <Link class="dropdown-item" to={'/hca'}>HCA</Link>
                               <Link class="dropdown-item" to={'/asurion'}>Asurion</Link>
