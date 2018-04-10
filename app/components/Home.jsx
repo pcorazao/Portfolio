@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import ProfilePic from '../images/ProfilePic.png';
+import ProfilePic from '../images/ProfilePic.jpg';
 import '../../app/css/Home.css';
 
 export class Home extends React.Component {
