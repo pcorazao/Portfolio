@@ -23,6 +23,8 @@
     top:0;
     left:0;
     z-index:1;
+    border-style: solid;
+    border-width: 1.5px;
 }
 .jumbotron h2 {margin-top:0;}
 .jumbotron {

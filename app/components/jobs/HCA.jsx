@@ -19,10 +19,10 @@ export class HCA extends React.Component {
                             <div class="row" style={{marginTop:'30px'}}>
                                 <div class="col-lg-9 offset-lg-1">                                        
                                     <h5 class="mt-0">Software Engineer</h5>
-                                        <p><i>Hospital Corporation of America (HCA) is one of the largest healthcare corporations in our country.  
+                                        <p><em>Hospital Corporation of America (HCA) is one of the largest healthcare corporations in our country.  
                                             HCA owns and maintains a large network of hospitals and offers services ranging from hospital supply chain to technology solutions.  
                                             I interned with HCA in Nashville during undergrad and worked for one of their hospitals in San Antonio (<a href="https://sahealth.com/">Methodist Hospital</a>).
-                                            </i></p>
+                                            </em></p>
 
                                         <ul>
                                             <li>Produced software solutions for a healthcare Group Purchasing Organization (GPO) called <a href="https://healthtrustpg.com/">HealthTrust</a>.</li>

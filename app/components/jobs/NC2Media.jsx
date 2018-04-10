@@ -17,12 +17,12 @@ export class NC2Media extends React.Component {
                             <div class="row" style={{marginTop:'30px'}}>
                                 <div class="col-lg-10 offset-lg-1">                                        
                                     <h5 class="mt-0">Sr. Software Engineer</h5>
-                                    <p><i>  
+                                    <p><em>  
                                        NC2 Media is a mid sized company with a large portfolio of solution offerings to the Nashville area.
                                        The company developes websites for famous country music artists and events.
                                        NC2 also provides websites to select local products and brands.  
                                        They help establish and promote brands via various channels and outlets.  
-                                       I worked extensively with Azure, Angular and C# on two minimal viable product (MVC) products</i></p>
+                                       I worked extensively with Azure, Angular and C# on two minimal viable product (MVC) products</em></p>
                                     <ul>
                                         <li>Developed MVC digital marketplace of crowd sourced media with Azure</li>
                                         <li>Developed MVC digital advertizing in games via <a href="https://unity3d.com/">Unity</a></li>

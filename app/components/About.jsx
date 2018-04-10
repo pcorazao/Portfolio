@@ -18,11 +18,11 @@ export class About extends React.Component {
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <p><i>Howdy y'all, I moved from my home town Nashville Tennessee to Seattle Washington to join the tech boom!
+                                        <p><em>Howdy y'all, I moved from my home town Nashville Tennessee to Seattle Washington to join the tech boom!
                                               My wife and I have grown to love the Puget Sound area.  
                                               We love to spend time with our golden retriever at Marymoor dog park. 
                                               I really enjoy fishing the fresh water lakes and sound in my Hobie kayak.  
-                                              I also love to code and happen to be a strong software engineer!</i></p>
+                                              I also love to code and happen to be a strong software engineer!</em></p>
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>

@@ -17,10 +17,10 @@ export class Asurion extends React.Component {
                             <div class="row" style={{marginTop:'30px'}}>
                                 <div class="col-lg-10 offset-lg-1">                                        
                                     <h5 class="mt-0">Software Engineer 4</h5>
-                                        <p><i>  
+                                        <p><em>  
                                             Asurion is the major cell phone insurance provider for US carriers and most over seas countries.  
                                             Asurion has a highly integrated and large system that needs timely adjustment in order to maintain success.  
-                                            Have you ever lost or damaged a phone and processed a claim with Asurion? If yes, then it is likely my code helped process your claim!</i></p>
+                                            Have you ever lost or damaged a phone and processed a claim with Asurion? If yes, then it is likely my code helped process your claim!</em></p>
                                         <ul>
                                             <li>Developed integration services to communicate with various carriers Verizon, ATT, MetroPCS, Walmart, TMobile.</li>
                                             <li>Developed Asurion's middle tier consisting of Tiboc EMS,  Tibco BW (JVM) Services and WCF Services.</li>

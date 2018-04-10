@@ -17,13 +17,13 @@ export class CommerceHub extends React.Component {
                                     <div class="row" style={{marginTop:'30px'}}>
                                         <div class="col-lg-10 offset-lg-1">                                        
                                             <h5 class="mt-0">Sr. Software Engineer</h5>
-                                            <p><i>  
+                                            <p><em>  
                                             CommerceHub helps retailers and brands increase sales by expanding the product assortments, 
                                             promoting products on the channels that perform, and enabling rapid, on-time customer delivery.  
                                             The company specializes in reducing deliver times of online purchases via drop ship integration solutions.
                                             The company offers several solutions to list products on various marketplaces (Amazon, Walmart, Jet, Sears, Google, Bing etc..).  
                                             CommerceHub also provides technology to create product demand via Google AdWords, Facebook Ads, Bing Ads, and various Sponsored Products etc...
-                                            </i></p>
+                                            </em></p>
                                             <ul>
                                                 <li>Developed and maintained a solution that delivered products to marketplaces.</li>
                                                 <li>Developed and maintained a solution that created demand for products on Google AdWords and Bing Ads.</li>
