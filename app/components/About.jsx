@@ -18,10 +18,11 @@ export class About extends React.Component {
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <p><i>Hey y'all! I moved to Seattle from Nashville Tennessee back in 2016.
-                                              My wife and I really enjoy the area.  We have a golden retriever that loves going to Marymoor dog park. 
-                                              I really enjoy fishing the lakes and sound from my hobie kayak.  
-                                              I also love to code, and happen to be a strong software engineer!</i></p>
+                                        <p><i>Howdy y'all, I moved from my home town Nashville Tennessee to Seattle Washington to join the tech boom!
+                                              My wife and I have grown to love the Puget Sound area.  
+                                              We love to spend time with our golden retriever at Marymoor dog park. 
+                                              I really enjoy fishing the fresh water lakes and sound in my Hobie kayak.  
+                                              I also love to code and happen to be a strong software engineer!</i></p>
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>
@@ -35,19 +36,21 @@ export class About extends React.Component {
                                     </div>                                    
                                     <div class="col-lg-9">                                        
                                         <h5 class="mt-0">University of Texas San Antonio</h5>
-                                        <p>I finished my undergrad in computer science while working nights and weekends as a help desk technician for Methodist hospital.  
-                                            UTSA is a great for Computer Science! I spent allot of time working with Linux and learning the fundamentals of computer science.  
-                                            I enjoyed graphics class where we rendered 3D objects in OpenGL i.e. DirectX and moved them around.  
+                                            <p>I finished my undergrad in computer science at UTSA and really helped to accelerate my carrier.  
+                                            UTSA is a great for Computer Science, and helped me build a strong foundation! 
+                                            I spent allot of time working with Linux and learning the fundamentals of computer science.  
+                                            I enjoyed graphics class where we rendered 3D objects in OpenGL.  
                                             I had a great time in imbedded systems programming lego robots to solve mazes drawn with electrical tape.</p> 
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>                                                                        
                                     <div class="col-lg-9 offset-lg-1 order-lg-1 order-2">                                        
                                         <h5 class="mt-0">Middle Tennessee State University</h5>
-                                        <p>Moving from Dallas Texas after my first big new grad job with Nortel, I joined HCA and began taking night classes at MTSU for my Master in Computer Science. 
+                                            <p>I finished my masters degree in computer science at MTSU while working full time. 
                                             Here I studied big parallel on Unix clusters using a programming framework called MPI.  
-                                            I implemented my own version of MPI in one class and you can review that <a href="https://github.com/pcorazao/mpi">here</a>.
-                                            I also took data mining and artificial intelligence.  I implemented artificial intelligence algorithms like: decision trees, classifiers and recommendation systems.</p> 
+                                            I implemented my own version of MPI in one class that can be reviewed review <a href="https://github.com/pcorazao/mpi">here</a>.
+                                            I also took data mining and artificial intelligence classes.  
+                                            I implemented artificial intelligence algorithms like: decision trees, classifiers and recommendation systems.</p> 
                                     </div>
                                     <div class="col-lg-2 order-lg-2 order-1 align-self-center">
                                         <img class="img-fluid rounded" src={MTSUPic} alt="Generic placeholder image"/>

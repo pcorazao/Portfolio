@@ -8,7 +8,7 @@ export class SiteNavigation extends React.Component {
             {        
                 return (  
                   <div>
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style={{opacity:.75, zIndex:3}}>
                       <Link class="navbar-brand" to={'/'}>Peter Corazao</Link>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

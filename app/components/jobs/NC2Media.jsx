@@ -10,7 +10,7 @@ export class NC2Media extends React.Component {
                 return (<div>
                     <div class="container">
                             <div class="row">                                    
-                                <div class="col-lg-4 align-self-center">
+                                <div class="col-lg-2 align-self-center">
                                     <img class="img-fluid rounded" src={NC2MediaPic} alt="Generic placeholder image"/>
                                 </div>                                   
                             </div>
@@ -26,7 +26,7 @@ export class NC2Media extends React.Component {
                                     <ul>
                                         <li>Developed MVC digital marketplace of crowd sourced media with Azure</li>
                                         <li>Developed MVC digital advertizing in games via <a href="https://unity3d.com/">Unity</a></li>
-                                        <li>Feel like playing some games: <a href="https://unity-pete.azurewebsites.net/Unity-Survival-Shooter-Web.html">Survival Shooter</a>&nbsp;|&nbsp; 
+                                        <li>Proficient in Unity, Feel like playing some games? <a href="https://unity-pete.azurewebsites.net/Unity-Survival-Shooter-Web.html">Survival Shooter</a>&nbsp;|&nbsp; 
                                         <a href="https://unity-pete.azurewebsites.net/stealth01.html">Stealth</a> &nbsp;|&nbsp;
                                         <a href="https://unity-pete.azurewebsites.net/SpaceShooter.html">Space Shooter</a> &nbsp;|&nbsp;
                                         <a href="https://unity-pete.azurewebsites.net/Scavanger.html">Scavanger</a>

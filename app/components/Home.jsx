@@ -11,10 +11,11 @@ export class Home extends React.Component {
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-11">
-                                <div class="jumbotron">
+                                <div class="jumbotron jumbotron-billboard">
+                                <div class="img"></div>
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                             <img src={ProfilePic} class="img-fluid rounded" alt="Responsive image" />
                                         </div>
                                         <div class="col-lg-8">
@@ -30,7 +31,7 @@ export class Home extends React.Component {
                                                 <br />
                                             <p class="lead">
                                                 <Link to={'/about'}>
-                                                    <div class="btn btn-primary btn-lg" role="button">Learn more</div>
+                                                    <div class="btn btn-secondary btn-lg" role="button">Learn more</div>
                                                 </Link>
                                             </p>
                                         </div>
@@ -40,11 +41,7 @@ export class Home extends React.Component {
                             </div>
                         </div>
                     </div>
-
-            {/* <div className="app">
-                <p>This text will be blue</p>
-            </div> */}
-        </div>
+                </div>
         );
     }
 }

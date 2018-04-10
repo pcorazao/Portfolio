@@ -7,7 +7,7 @@ export class Footer extends React.Component {
             {        
                 return (
                         <div>
-                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom justify-content-end navbar-expand-lg">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom justify-content-end navbar-expand-lg" style={{opacity:.75}}>
                                 <ul class="navbar-nav">
                                 <li class="nav-item active">
                                     <a class="nav-link" href="https://github.com/pcorazao/Portfolio"><i class="fa fa-github"></i>&nbsp;Source</a>
