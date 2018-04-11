@@ -26,11 +26,35 @@ export class Asurion extends React.Component {
                                             <li>Developed Asurion's middle tier consisting of Tiboc EMS,  Tibco BW (JVM) Services and WCF Services.</li>
                                             <li>Delivered the project <a href="https://www.youtube.com/watch?v=MULfhIbPoT4">AT&T Mulit-Device Protection Pack</a>, required large adjustments to Asurion's middle tier.</li>
                                             <li>Delivered the project <a href="https://play.google.com/store/apps/details?id=com.asurion.android.verizon.vms&feature=search_result">Verizon Mobile Security</a>, required large adjustments to Asurion's middle tier. </li>
-                                            <li>Greatly improved Dev and QA environment testing by creating service emulation of external APIs.</li>
-                                            <li>Greatly improved deployment processes to dev, qa and production utilizing Jenkins, Artifactory and GOCD.</li>
-                                            <li>Developed the companies internal web site in SharePoint 2010.</li>
+                                            <li>Decreased testing effort and increased test case coverage by creating service emulation of external APIs in Dev and QA environments.</li>
+                                            <li>Reduced manual effort and errors by introducing automated deployment process to Dev, QA, and Production using GOCD and Artifactory.</li>
+                                            <li>Developed the company’s internal website in SharePoint 2010.</li>
                                             <li>Hired as a Software Engineer 2, promoted Sr. Software Engineer and finally Software Engineer 4, trusted with large projects.</li>
                                         </ul>
+                                </div>
+                            </div>
+                            <div class="row" style={{marginTop:'30px'}}>
+                                <div class="col-lg-12  offset-lg-1">
+                                    <h5>Skills</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-11 offset-lg-1">
+                                    <span class="badge badge-pill badge-dark">C#</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">ASP.Net</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">MVC.Net</span>&nbsp;                                           
+                                    <span class="badge badge-pill badge-dark">JavaScript</span>&nbsp;                                       
+                                    <span class="badge badge-pill badge-dark">JQuery</span>&nbsp;                                       
+                                    <span class="badge badge-pill badge-dark">ReactJS</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">SQL</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">CSS</span>&nbsp;                                                                               
+                                    <span class="badge badge-pill badge-dark">HTML</span>&nbsp;                                           
+                                    <span class="badge badge-pill badge-dark">AWS</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">.Net Core</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">Puppet</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">GOCD</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">Artifactory</span>&nbsp;
+                                    <span class="badge badge-pill badge-dark">SharePoint 2010</span>&nbsp;
                                 </div>
                             </div>
                         </div>

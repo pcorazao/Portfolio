@@ -16,10 +16,10 @@ export class Footer extends React.Component {
                                     <a class="nav-link" href="mailto:pcorazao@gmail.com"><i class="fa fa-envelope"></i>&nbsp;Email</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="https://www.linkedin.com/in/petercorazao/"><i class="fa fa-linkedin"></i>&nbsp;LinkedIn</a>
+                                    <a class="nav-link" href="https://www.linkedin.com/in/petercorazao/"><i class="fa fa-linkedin-square"></i>&nbsp;LinkedIn</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="https://twitter.com/pcorazao"><i class="fa fa-twitter"></i>&nbsp;LinkedIn</a>
+                                    <a class="nav-link" href="https://twitter.com/pcorazao"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
                                 </li>
                                 </ul>
                             </nav>

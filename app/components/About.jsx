@@ -13,16 +13,16 @@ export class About extends React.Component {
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h1>About Pete</h1>
+                                        <h2>About Pete</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <p><em>Howdy y'all, I moved from my home town Nashville Tennessee to Seattle Washington to join the tech boom!
-                                              My wife and I have grown to love the Puget Sound area.  
-                                              We love to spend time with our golden retriever at Marymoor dog park. 
-                                              I really enjoy fishing the fresh water lakes and sound in my Hobie kayak.  
-                                              I also love to code and happen to be a strong software engineer!</em></p>
+                                        <p><em>Hi y’all! In 2015 I moved from my home town of Nashville, TN to Seattle, WA. 
+                                            My wife and I have grown to love the Puget Sound area. 
+                                            We frequently spend our Saturdays at Marymoor dog park with our golden retriever, and fishing is my favorite hobby. 
+                                            I enjoy going out in the Puget Sound and the many lakes around the area in my Hobie kayak. 
+                                            I also love to code and solve hard problems in the software space.</em></p>
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>
@@ -36,21 +36,22 @@ export class About extends React.Component {
                                     </div>                                    
                                     <div class="col-lg-9">                                        
                                         <h5 class="mt-0">University of Texas San Antonio</h5>
-                                            <p>I finished my undergrad in computer science at UTSA and really helped to accelerate my carrier.  
-                                            UTSA is a great for Computer Science, and helped me build a strong foundation! 
-                                            I spent allot of time working with Linux and learning the fundamentals of computer science.  
-                                            I enjoyed graphics class where we rendered 3D objects in OpenGL.  
-                                            I had a great time in imbedded systems programming lego robots to solve mazes drawn with electrical tape.</p> 
+                                            <p>I jump started my career by getting my undergrad in computer science at UTSA. 
+                                                This was a great school for computer science and helped me build a strong foundation. 
+                                                While there, I spent a lot of time working with Linux and learning the fundamentals of CS. 
+                                                I especially enjoyed my graphics class where we rendered 3D objects in OpenGL. 
+                                                I also had a great time in my embedded systems class programming Lego robots to solve mazes drawn with electrical tape.</p> 
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>                                                                        
                                     <div class="col-lg-9 offset-lg-1 order-lg-1 order-2">                                        
                                         <h5 class="mt-0">Middle Tennessee State University</h5>
-                                            <p>I finished my masters degree in computer science at MTSU while working full time. 
-                                            Here I studied big parallel on Unix clusters using a programming framework called MPI.  
-                                            I implemented my own version of MPI in one class that can be reviewed review <a href="https://github.com/pcorazao/mpi">here</a>.
-                                            I also took data mining and artificial intelligence classes.  
-                                            I implemented artificial intelligence algorithms like: decision trees, classifiers and recommendation systems.</p> 
+                                            <p>I completed my Master’s degree in computer science at MTSU in 2013 while also working full time at Asurion. 
+                                                I focused on big parallel on Unix clusters using a programmatic framework called MPI. 
+                                                In my design of Parallel Software class, I even implemented <a href="https://github.com/pcorazao/mpi">my own version of MPI</a>. 
+                                                Other class I particularly enjoyed were Data Mining and Artificial Intelligence. 
+                                                In my AI class, we implemented some of the foundational AI algorithms like decision trees, classifiers, and recommendation systems.
+                                            </p> 
                                     </div>
                                     <div class="col-lg-2 order-lg-2 order-1 align-self-center">
                                         <img class="img-fluid rounded" src={MTSUPic} alt="Generic placeholder image"/>
@@ -63,26 +64,32 @@ export class About extends React.Component {
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-11 offset-lg-1">
-                                        <span class="badge badge-pill badge-dark">C#</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">SQL</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">JavaScript</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">React</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Angular</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Node</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Express</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Azure</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">AWS</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Ruby</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Python</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Perl</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">C</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">C++</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Chef</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Gulp</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">Java</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">HTML</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">BootStrap</span>&nbsp;
-                                        <span class="badge badge-pill badge-dark">CSS</span>&nbsp;
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Tier</th>
+                                                <th scope="col">Tech Stack</th>                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>                                            
+                                                <td>Front End</td>
+                                                <td>ASP, MVC, HTML, ReactJS, AngularJS, JQuery, CSS, Javascript, Bootstrap</td>
+                                            </tr>
+                                            <tr>                                            
+                                                <td>Middle</td>
+                                                <td>Tibco EMS, Tibco BW, Azure Service Bus, Azure Worker Role(s), SQS, Lambda, MSNQ, WebAPI, Express, Node, IIS, ASMX, WCF</td>
+                                            </tr>
+                                            <tr>                                            
+                                                <td>Database</td>
+                                                <td>SQL, Cosmos DB</td>
+                                            </tr>
+                                            <tr>                                            
+                                                <td>Platform</td>
+                                                <td>SharePoint, Chef, GOCD, Artifactory, Azure, AWS</td>
+                                            </tr>                                                                                           
+                                        </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="row" style={{marginTop:'30px'}}>
@@ -92,7 +99,7 @@ export class About extends React.Component {
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-11 offset-lg-1">
-                                        From time to time I contribute to <a href="https://pragmaticsoa.wordpress.com/">Pragmatic Architecture</a>
+                                        From time to time I contribute to <a href="https://pragmaticsoa.wordpress.com/">Pragmatic Architecture, site dedicated to trending Architecture technology and patterns.</a>
                                     </div>
                                 </div>
                             </div>
