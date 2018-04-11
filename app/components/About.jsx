@@ -99,7 +99,7 @@ export class About extends React.Component {
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-11 offset-lg-1">
-                                        From time to time I contribute to <a href="https://pragmaticsoa.wordpress.com/">Pragmatic Architecture, site dedicated to trending Architecture technology and patterns.</a>
+                                        From time to time I contribute to <a href="https://pragmaticsoa.wordpress.com/">Pragmatic Architecture</a>, a site dedicated to trending architecture technology and patterns.
                                     </div>
                                 </div>
                             </div>
