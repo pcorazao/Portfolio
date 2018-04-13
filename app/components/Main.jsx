@@ -8,6 +8,7 @@ import {HCA} from './jobs/HCA.jsx';
 import {Asurion} from './jobs/Asurion.jsx';
 import {NC2Media} from './jobs/NC2Media.jsx';
 import {CommerceHub} from './jobs/CommerceHub.jsx';
+import {Policy} from './Policy.jsx';
 
 
 export class Main extends React.Component {
@@ -21,6 +22,7 @@ export class Main extends React.Component {
                             <Route path="/asurion" component={Asurion} />
                             <Route path="/nc2media" component={NC2Media} />
                             <Route path="/commercehub" component={CommerceHub} />
+                            <Route path="/policy" component={Policy} />
                         </div>                    
                         );  
             }  
