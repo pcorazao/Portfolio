@@ -45,6 +45,17 @@ app.post('/webhook', (req, res) => {
         } else if (webhook_event.postback) {
           handlePostback(sender_psid, webhook_event.postback);
         }
+      } 
+      else if(entry.changes && entry.changes.length > 0)
+      {
+        console.log('changes');
+        console.log(entry.changes[0]);
+        var messages = entry.changes[0];
+        if(messages && messages.length > 0)
+        {
+          console.log('messages');
+          console.log(messages[0]);
+        }
       }
 
     });
