@@ -16,6 +16,8 @@ app.get('/api/hello', (req, res) => {
 app.post('/webhook', (req, res) => {  
  
   let body = req.body;
+  console.log('webhook');
+  console.log(body);
 
   // Checks this is an event from a page subscription
   if (body.object === 'page') {
@@ -89,6 +91,9 @@ app.get('/webhook', (req, res) => {
 function handleMessage(sender_psid, received_message) {
   let response;
 
+  console.log('handleMessage');
+  console.log(received_message);
+
   // Check if the message contains text
   if (received_message.text) {    
 
@@ -135,6 +140,9 @@ function handleMessage(sender_psid, received_message) {
 function handlePostback(sender_psid, received_postback) {
   let response;
   
+  console.log('handlePostback');
+  console.log(received_postback);
+
   // Get the payload for the postback
   let payload = received_postback.payload;
 
