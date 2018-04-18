@@ -115,7 +115,7 @@ function GetDaisy(){
         "elements": [{
           "title": "Do you like Daisy?",
           "subtitle": "Tap a button to answer.",
-          "image_url": "http://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12232719/Golden-Retriever-On-White-05.jpg",
+          "image_url": "https://drive.google.com/open?id=1ogPnwN4pppGuzJ4sE7KuFnHVEA5JEFtf",
           "buttons": [
             {
               "type": "postback",
