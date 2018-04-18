@@ -153,6 +153,68 @@ function GetResume(){
         };
 }
 
+function GetFishing(){
+  return{
+          "attachment": {
+            "type": "template",
+            "payload": {
+              "template_type": "generic",
+              "elements": [
+                {
+                  "title": "Do you like Lingcod?",
+                  "subtitle": "fish and chips!",
+                  "image_url": "https://petercorazao.blob.core.windows.net/portfolio/IMG_3092.JPG",
+                  "buttons": [
+                    {
+                      "type": "postback",
+                      "title": "Yes!",
+                      "payload": "yes",
+                    },
+                    {
+                      "type": "postback",
+                      "title": "No!",
+                      "payload": "no",
+                    }
+                  ],
+                },{
+                  "title": "Do you like cutthroat trout?",
+                  "subtitle": "Lake Sammamish",
+                  "image_url": "https://petercorazao.blob.core.windows.net/portfolio/IMG_2634.JPG",
+                  "buttons": [
+                    {
+                      "type": "postback",
+                      "title": "Yes!",
+                      "payload": "yes",
+                    },
+                    {
+                      "type": "postback",
+                      "title": "No!",
+                      "payload": "no",
+                    }
+                  ],
+                },{
+                  "title": "Do you like Kokanee?",
+                  "subtitle": "Lake Steven",
+                  "image_url": "https://petercorazao.blob.core.windows.net/portfolio/IMG_2776.JPG",
+                  "buttons": [
+                    {
+                      "type": "postback",
+                      "title": "Yes!",
+                      "payload": "yes",
+                    },
+                    {
+                      "type": "postback",
+                      "title": "No!",
+                      "payload": "no",
+                    }
+                  ],
+                }
+              ]
+            }
+          }
+        };
+}
+
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -183,7 +245,10 @@ function handleMessage(sender_psid, received_message) {
         response =  GetDaisy();
       } else if(received_message.text.includes("resume") || received_message.text.includes("Resume")){
         response = GetResume();
-      }else{
+      } else if(received_message.text.includes("fishing") || received_message.text.includes("Fishing")){
+        response = GetFishing();
+      }
+      else{
         // Create the payload for a basic text message
         response = {
           "text": `I am actually a bot, Pete will see this and get back to you soon, or email him at pcorazao@gmail.com!`
