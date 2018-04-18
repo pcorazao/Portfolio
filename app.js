@@ -115,7 +115,7 @@ function GetDaisy(){
         "elements": [{
           "title": "Do you like Daisy?",
           "subtitle": "Tap a button to answer.",
-          "image_url": "https://drive.google.com/open?id=1ogPnwN4pppGuzJ4sE7KuFnHVEA5JEFtf",
+          "image_url": "https://petercorazao.blob.core.windows.net/portfolio/Daisy.JPG",
           "buttons": [
             {
               "type": "postback",
