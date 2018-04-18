@@ -134,6 +134,24 @@ function GetDaisy(){
   }
 }
 
+function GetResume(){
+  return{
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type":"button",
+        "text":"Feel free to download my resume",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://petercorazao.blob.core.windows.net/portfolio/Peter Corazao Resume.docx",
+            "title":"Pete's Resume"
+          }
+        ]
+      }
+  }
+}
+
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -162,10 +180,12 @@ function handleMessage(sender_psid, received_message) {
       if(received_message.text.includes("daisy") || received_message.text.includes("Daisy") || received_message.text.includes("favicon"))
       {
         response =  GetDaisy();
+      } else if(received_message.text.includes("resume") || received_message.text.includes("Resume")){
+        response = GetResume();
       }else{
         // Create the payload for a basic text message
         response = {
-          "text": `You sent the message: "${received_message.text}". Now send me an image!`
+          "text": `I am actually a bot, Pete will see this and get back to you soon, or email him at pcorazao@gmail.com!`
         }
       }
     } else if (received_message.attachments) {
