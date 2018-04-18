@@ -114,7 +114,7 @@ function GetDaisy(){
         "template_type": "generic",
         "elements": [{
           "title": "Do you like Daisy?",
-          "subtitle": "Tap a button to answer.",
+          "subtitle": "She is my fishing buddy",
           "image_url": "https://petercorazao.blob.core.windows.net/portfolio/Daisy.JPG",
           "buttons": [
             {
