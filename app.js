@@ -45,19 +45,7 @@ app.post('/webhook', (req, res) => {
         } else if (webhook_event.postback) {
           handlePostback(sender_psid, webhook_event.postback);
         }
-      } 
-      else if(entry.changes && entry.changes.length > 0)
-      {
-        console.log('changes');
-        console.log(entry.changes[0]);
-        var messages = entry.changes[0];
-        if(messages && messages.length > 0)
-        {
-          console.log('messages');
-          console.log(messages[0]);
-        }
       }
-
     });
 
     // Returns a '200 OK' response to all requests
@@ -98,6 +86,11 @@ app.get('/webhook', (req, res) => {
   }
 });
 
+// gets the firstEntity
+function firstEntity(nlp, name) {
+  return nlp && nlp.entities && nlp.entities[name] && nlp.entities[name][0];
+}
+
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -105,39 +98,45 @@ function handleMessage(sender_psid, received_message) {
   console.log('handleMessage');
   console.log(received_message);
 
-  // Check if the message contains text
-  if (received_message.text) {    
+  // check greeting is here and is confident
+  const greeting = firstEntity(message.nlp, 'greetings');
+  if (greeting && greeting.confidence > 0.8) {
+    response = { "text": `Howdy!` }
+  } else { 
+    // Check if the message contains text
+    if (received_message.text) {    
 
-    // Create the payload for a basic text message
-    response = {
-      "text": `You sent the message: "${received_message.text}". Now send me an image!`
-    }
-  } else if (received_message.attachments) {
-  
-    // Gets the URL of the message attachment
-    let attachment_url = received_message.attachments[0].payload.url;
-    response = {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
-            "image_url": attachment_url,
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Yes!",
-                "payload": "yes",
-              },
-              {
-                "type": "postback",
-                "title": "No!",
-                "payload": "no",
-              }
-            ],
-          }]
+      // Create the payload for a basic text message
+      response = {
+        "text": `You sent the message: "${received_message.text}". Now send me an image!`
+      }
+    } else if (received_message.attachments) {
+    
+      // Gets the URL of the message attachment
+      let attachment_url = received_message.attachments[0].payload.url;
+      response = {
+        "attachment": {
+          "type": "template",
+          "payload": {
+            "template_type": "generic",
+            "elements": [{
+              "title": "Is this the right picture?",
+              "subtitle": "Tap a button to answer.",
+              "image_url": attachment_url,
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "Yes!",
+                  "payload": "yes",
+                },
+                {
+                  "type": "postback",
+                  "title": "No!",
+                  "payload": "no",
+                }
+              ],
+            }]
+          }
         }
       }
     }
