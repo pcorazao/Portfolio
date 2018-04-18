@@ -100,7 +100,7 @@ function handleMessage(sender_psid, received_message) {
 
   // check greeting is here and is confident
   const greeting = firstEntity(received_message.nlp, 'greetings');
-  const thank = firstEntity(received_message.nlp, 'thank');
+  const thank = firstEntity(received_message.nlp, 'thanks');
   const bye = firstEntity(received_message.nlp, 'bye');
   if (greeting && greeting.confidence > 0.8) {
     response = { "text": `Howdy!` }
