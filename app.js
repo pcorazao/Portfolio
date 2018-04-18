@@ -99,9 +99,15 @@ function handleMessage(sender_psid, received_message) {
   console.log(received_message);
 
   // check greeting is here and is confident
-  const greeting = firstEntity(message.nlp, 'greetings');
+  const greeting = firstEntity(received_message.nlp, 'greetings');
+  const thank = firstEntity(received_message.nlp, 'thank');
+  const bye = firstEntity(received_message.nlp, 'bye');
   if (greeting && greeting.confidence > 0.8) {
     response = { "text": `Howdy!` }
+  } else if (thank && thank.confidence > 0.8) {
+    response = { "text": `What can I say except you're welcome!` }
+  } else if (bye && bye.confidence > 0.8) {
+    response = { "text": `Good chatting with you, have a great day!` }
   } else { 
     // Check if the message contains text
     if (received_message.text) {    
