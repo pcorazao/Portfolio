@@ -106,6 +106,34 @@ function GetBye(){
   return byes[Math.floor(Math.random() * byes.length)];
 }
 
+function GetDaisy(){
+  return {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [{
+          "title": "Do you like Daisy?",
+          "subtitle": "Tap a button to answer.",
+          "image_url": "http://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12232719/Golden-Retriever-On-White-05.jpg",
+          "buttons": [
+            {
+              "type": "postback",
+              "title": "Yes!",
+              "payload": "yes",
+            },
+            {
+              "type": "postback",
+              "title": "No!",
+              "payload": "no",
+            }
+          ],
+        }]
+      }
+    }
+  }
+}
+
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
@@ -131,9 +159,14 @@ function handleMessage(sender_psid, received_message) {
     // Check if the message contains text
     if (received_message.text) {    
 
-      // Create the payload for a basic text message
-      response = {
-        "text": `You sent the message: "${received_message.text}". Now send me an image!`
+      if(received_message.text.includes("daisy") || received_message.text.includes("Daisy") || received_message.text.includes("favicon"))
+      {
+        response =  GetDaisy();
+      }else{
+        // Create the payload for a basic text message
+        response = {
+          "text": `You sent the message: "${received_message.text}". Now send me an image!`
+        }
       }
     } else if (received_message.attachments) {
     
@@ -185,7 +218,7 @@ function handlePostback(sender_psid, received_postback) {
   if (payload === 'yes') {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
-    response = { "text": "Oops, try sending another image." }
+    response = { "text": "Oops, thats not good." }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
