@@ -136,20 +136,21 @@ function GetDaisy(){
 
 function GetResume(){
   return{
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "template_type":"button",
-        "text":"Feel free to download my resume",
-        "buttons":[
-          {
-            "type":"web_url",
-            "url":"https://petercorazao.blob.core.windows.net/portfolio/Peter Corazao Resume.docx",
-            "title":"Pete's Resume"
+          "attachment": {
+            "type": "template",
+            "payload": {
+              "template_type":"button",
+              "text":"Feel free to download my resume",
+              "buttons":[
+                {
+                  "type":"web_url",
+                  "url":"https://petercorazao.blob.core.windows.net/portfolio/Peter Corazao Resume.docx",
+                  "title":"Pete's Resume"
+                }
+              ]
+            }
           }
-        ]
-      }
-  }
+        };
 }
 
 // Handles messages events
