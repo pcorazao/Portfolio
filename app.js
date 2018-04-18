@@ -91,9 +91,25 @@ function firstEntity(nlp, name) {
   return nlp && nlp.entities && nlp.entities[name] && nlp.entities[name][0];
 }
 
+function GetGreeting(){
+  var greetings = ["Howdy!", "Hello!", "Yo!", "Greetings!", "Hi!"];
+  return greetings[Math.floor(Math.random() * greetings.length)];
+}
+
+function GetThank(){
+  var thanks = ["What can I say except you're welcome!", "Anytime", "No problem", "You're welcome", "Glad I could help"];
+  return thanks[Math.floor(Math.random() * thanks.length)];
+}
+
+function GetBye(){
+  var byes = ["Good chatting with you, have a great day!", "Thanks for stopping bye!", "Have a great day!", "Good chat, bye!"];
+  return byes[Math.floor(Math.random() * byes.length)];
+}
+
 // Handles messages events
 function handleMessage(sender_psid, received_message) {
   let response;
+  let msg;
 
   console.log('handleMessage');
   console.log(received_message);
@@ -103,11 +119,14 @@ function handleMessage(sender_psid, received_message) {
   const thank = firstEntity(received_message.nlp, 'thanks');
   const bye = firstEntity(received_message.nlp, 'bye');
   if (greeting && greeting.confidence > 0.8) {
-    response = { "text": `Howdy!` }
+    msg = GetGreeting();
+    response = { "text": `"${msg}"` };
   } else if (thank && thank.confidence > 0.8) {
-    response = { "text": `What can I say except you're welcome!` }
+    msg = GetThank();
+    response = { "text": `"${msg}"` };
   } else if (bye && bye.confidence > 0.8) {
-    response = { "text": `Good chatting with you, have a great day!` }
+    msg = GetBye();
+    response = { "text": `"${msg}"` };
   } else { 
     // Check if the message contains text
     if (received_message.text) {    
