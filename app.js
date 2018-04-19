@@ -241,22 +241,22 @@ function handleMessage(sender_psid, received_message) {
   {
     response = GetResume();
   } 
+  else if(intent && intent.value === "daisy_get" && intent.confidence > 0.8 )
+  {
+    response = GetDaisy();
+  }
+  else if(intent && intent.value === "fishing_get" && intent.confidence > 0.8 )
+  {
+    response = GetFishing();
+  }
   else { 
     // Check if the message contains text
     if (received_message.text) {    
-
-      if(received_message.text.includes("daisy") || received_message.text.includes("Daisy") || received_message.text.includes("favicon"))
-      {
-        response = GetDaisy();
-      } else if(received_message.text.includes("fishing") || received_message.text.includes("Fishing")){
-        response = GetFishing();
-      }
-      else{
+     
         // Create the payload for a basic text message
         response = {
           "text": `I am actually a bot, Pete will see this and get back to you soon, or email him at pcorazao@gmail.com!`
-        }
-      }
+        }     
     } else if (received_message.attachments) {
     
       // Gets the URL of the message attachment
