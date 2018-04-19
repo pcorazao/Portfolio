@@ -227,6 +227,7 @@ function handleMessage(sender_psid, received_message) {
   const greeting = firstEntity(received_message.nlp, 'greetings');
   const thank = firstEntity(received_message.nlp, 'thanks');
   const bye = firstEntity(received_message.nlp, 'bye');
+  const intent = firstEntity(received_message.nlp, 'intent');
   if (greeting && greeting.confidence > 0.8) {
     msg = GetGreeting();
     response = { "text": `${msg}` };
@@ -236,15 +237,17 @@ function handleMessage(sender_psid, received_message) {
   } else if (bye && bye.confidence > 0.8) {
     msg = GetBye();
     response = { "text": `${msg}` };
-  } else { 
+  } else if(intent && intent.value === "resume_get" && intent.confidence > 0.8 )
+  {
+    response = GetResume();
+  } 
+  else { 
     // Check if the message contains text
     if (received_message.text) {    
 
       if(received_message.text.includes("daisy") || received_message.text.includes("Daisy") || received_message.text.includes("favicon"))
       {
         response = GetDaisy();
-      } else if(received_message.text.includes("resume") || received_message.text.includes("Resume")){
-        response = GetResume();
       } else if(received_message.text.includes("fishing") || received_message.text.includes("Fishing")){
         response = GetFishing();
       }
