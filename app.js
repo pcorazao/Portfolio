@@ -92,7 +92,7 @@ function firstEntity(nlp, name) {
 }
 
 function GetGreeting(){
-  var greetings = ["Howdy!", "Hello!", "Yo!", "Greetings!", "Hi!"];
+  var greetings = ["Howdy!", "Hello!", "Greetings!", "Hi!"];
   return greetings[Math.floor(Math.random() * greetings.length)];
 }
 
@@ -102,7 +102,7 @@ function GetThank(){
 }
 
 function GetBye(){
-  var byes = ["Good chatting with you, have a great day!", "Thanks for stopping bye!", "Have a great day!", "Good chat, bye!"];
+  var byes = ["Good chatting with you, have a great day!", "Thanks for stopping by!", "Have a great day!", "Good chat, bye!"];
   return byes[Math.floor(Math.random() * byes.length)];
 }
 
@@ -229,20 +229,20 @@ function handleMessage(sender_psid, received_message) {
   const bye = firstEntity(received_message.nlp, 'bye');
   if (greeting && greeting.confidence > 0.8) {
     msg = GetGreeting();
-    response = { "text": `"${msg}"` };
+    response = { "text": `${msg}` };
   } else if (thank && thank.confidence > 0.8) {
     msg = GetThank();
-    response = { "text": `"${msg}"` };
+    response = { "text": `${msg}` };
   } else if (bye && bye.confidence > 0.8) {
     msg = GetBye();
-    response = { "text": `"${msg}"` };
+    response = { "text": `${msg}` };
   } else { 
     // Check if the message contains text
     if (received_message.text) {    
 
       if(received_message.text.includes("daisy") || received_message.text.includes("Daisy") || received_message.text.includes("favicon"))
       {
-        response =  GetDaisy();
+        response = GetDaisy();
       } else if(received_message.text.includes("resume") || received_message.text.includes("Resume")){
         response = GetResume();
       } else if(received_message.text.includes("fishing") || received_message.text.includes("Fishing")){
