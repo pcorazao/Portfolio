@@ -255,7 +255,7 @@ function handleMessage(sender_psid, received_message) {
      
         // Create the payload for a basic text message
         response = {
-          "text": `I am actually a bot, Pete will see this and get back to you soon, or email him at pcorazao@gmail.com!`
+          "text": `I am actually a bot, and not sure what you are asking. To get in touch with peter corazao you can email him at pcorazao@gmail.com!`
         }     
     } else if (received_message.attachments) {
     
